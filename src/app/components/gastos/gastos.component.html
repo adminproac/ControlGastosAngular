@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <ng-template [ngIf]="doing">
+                <div class="alert alert-info mt-2" role="alert">
+                    Cargando...
+                </div>
+            </ng-template>
+            <table class="table mt-10">
+                <thead>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>Operaciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let gasto of listGastos">
+                        <td>{{gasto.id}}</td>
+                        <td>{{gasto.nombre}}</td>
+                        <div>
+                            <button class="btn btn-primary" (click)="Editar(gasto)">Editar</button>
+                            <button class="btn btn-danger" (click)="Eliminar(gasto.id)">Eliminar</button>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary" (click)="Nuevo()">Nuevo</button>
+        </div>
+        <div class="col-md-4">
+            <form class="row g-3" [formGroup]="GastosForm" (ngSubmit)="onSubmit()">
+                <div class="col-md-6">
+                    <label for="id" class="form-label">Id gasto</label>
+                    <input type="number" class="form-control" id="id" formControlName="id">
+                </div>
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="texto" class="form-control" id="nombre" formControlName="nombre">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" [disabled]="!GastosForm.valid">{{editando? "Actualizar":"Guardar"}}</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

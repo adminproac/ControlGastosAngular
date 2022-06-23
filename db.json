@@ -1,0 +1,72 @@
+{
+  "ccostos": [
+    {
+      "id": 1,
+      "nombre": "Jose William Duarte Caceres"
+    },
+    {
+      "id": 2,
+      "nombre": "Myriam Rocio Duarte Caceres"
+    },
+    {
+      "id": 3,
+      "nombre": "Jesús Edgar Duarte Cáceres"
+    },
+    {
+      "id": 4,
+      "nombre": "Liney Castellar"
+    }
+  ],
+  "gastos": [
+    {
+      "id": 1,
+      "nombre": "Energia"
+    },
+    {
+      "id": 2,
+      "nombre": "Gas Natural"
+    },
+    {
+      "id": 3,
+      "nombre": "Agua"
+    },
+    {
+      "id": 4,
+      "nombre": "Claro Hogar"
+    }
+  ],
+  "pagos": [
+    {
+      "id": 1,
+      "ccostoId": 1,
+      "gastoId": 1,
+      "valorpago": 100000,
+      "fechapago": "20-06-2022"
+    },
+    {
+      "id": 2,
+      "ccostoId": 1,
+      "gastoId": 2,
+      "valorpago": 100000,
+      "fechapago": "20-06-2022"
+    }
+  ],
+  "cuentas": [
+    {
+      "nombreccosto": "Myriam Rocio Duarte Caceres",
+      "nombregasto": "Energia",
+      "valorpago": 100000,
+      "fechapago": "20-06-2022",
+      "ccostoId": 1,
+      "gastoId": 1
+    },
+    {
+      "nombreccosto": "Myriam Rocio Duarte Caceres",
+      "nombregasto": "Gas Natural",
+      "valorpago": 100000,
+      "fechapago": "20-06-2022",
+      "ccostoId": 1,
+      "gastoId": 2
+    }
+  ]
+}
